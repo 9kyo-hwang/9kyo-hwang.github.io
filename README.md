@@ -1,30 +1,30 @@
 # 9KYO DEV LOG
 
-`https://9kyo-hwang.github.io/`??寃뚯떆???뺤쟻 媛쒕컻 釉붾줈洹몄엯?덈떎.
+`https://9kyo-hwang.github.io/`에 게시할 정적 개발 블로그입니다.
 
-## 援ъ꽦
+## 구성
 
-- `index.html`: ?덇낵 理쒖떊 湲
-- `archive.html`: 寃?됀룻깭洹??꾪꽣媛 ?덈뒗 湲 紐⑸줉
-- `about.html`: 釉붾줈洹??뚭컻
-- `post-welcome.html`: 寃뚯떆湲 ?쒗뵆由우쓣 寃명븳 泥?湲
-- `assets/styles.css`: Nintendo.com 2001?먯꽌 ?곴컧??諛쏆? Y2K 肄섏넄 UI
-- `assets/main.js`: 紐⑤컮??硫붾돱, KST ?쒓퀎, 湲 寃?됯낵 ?꾪꽣
+- `index.html`: 홈과 최신 글
+- `archive.html`: 검색·태그 필터가 있는 글 목록
+- `about.html`: 블로그 소개
+- `post-welcome.html`: 게시글 템플릿을 겸한 첫 글
+- `assets/styles.css`: Nintendo.com 2001에서 영감을 받은 Y2K 콘솔 UI
+- `assets/main.js`: 모바일 메뉴, KST 시계, 글 검색과 필터
 
-???濡쒓퀬? 罹먮┃???먯궛? ?ъ슜?섏? ?딄퀬, 踰좊꺼 ?⑤꼸쨌移대낯 ?꾪듃쨌?섎━?숉겢 ?щ＼쨌二쇳솴 ?좏샇?됱씠?쇰뒗 ?붿옄??臾몃쾿留??ы빐?앺뻽?듬땲??
+타사 로고와 캐릭터 자산은 사용하지 않고, 베벨 패널·카본 도트·페리윙클 크롬·주황 신호색이라는 디자인 문법만 재해석했습니다.
 
-## ??湲 異붽?
+## 새 글 추가
 
-1. `post-welcome.html`??蹂듭궗????寃뚯떆湲 HTML??留뚮벊?덈떎.
-2. ?쒕ぉ, ?ㅻ챸, ?좎쭨? 蹂몃Ц??援먯껜?⑸땲??
-3. `index.html`??理쒖떊 湲 紐⑸줉怨?`archive.html`??寃??紐⑸줉????ぉ??異붽??⑸땲??
-4. `sitemap.xml`????二쇱냼瑜?異붽??⑸땲??
+1. `post-welcome.html`을 복사해 새 게시글 HTML을 만듭니다.
+2. 제목, 설명, 날짜와 본문을 교체합니다.
+3. `index.html`의 최신 글 목록과 `archive.html`의 검색 목록에 항목을 추가합니다.
+4. `sitemap.xml`에 새 주소를 추가합니다.
 
-## 濡쒖뺄 誘몃━蹂닿린
+## 로컬 미리보기
 
-?뺤쟻 ?뚯씪?대?濡?`index.html`??吏곸젒 ?????덉뒿?덈떎. 濡쒖뺄 HTTP ?쒕쾭媛 ?덈떎硫????붾젆?곕━瑜?臾몄꽌 猷⑦듃濡??ㅽ뻾?섎뒗 ?몄씠 留곹겕 寃利앹뿉 醫뗭뒿?덈떎.
+정적 파일이므로 `index.html`을 직접 열 수 있습니다. 로컬 HTTP 서버가 있다면 이 디렉터리를 문서 루트로 실행하는 편이 링크 검증에 좋습니다.
 
-## 諛고룷
+## 배포
 
-??μ냼 ?대쫫??`9kyo-hwang.github.io`濡?留뚮뱾怨????붾젆?곕━???뚯씪??`main` 釉뚮옖移?猷⑦듃??寃뚯떆?⑸땲?? GitHub ??μ냼??**Settings ??Pages**?먯꽌 `Deploy from a branch`, `main`, `/ (root)`瑜??좏깮?⑸땲??
+저장소 이름을 `9kyo-hwang.github.io`로 만들고 이 디렉터리의 파일을 `main` 브랜치 루트에 게시합니다. GitHub 저장소의 **Settings → Pages**에서 `Deploy from a branch`, `main`, `/ (root)`를 선택합니다.
 
