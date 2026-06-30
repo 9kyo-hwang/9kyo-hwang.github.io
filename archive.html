@@ -3,56 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="9kyo 개발 블로그의 글 목록입니다.">
-  <meta name="theme-color" content="#21242e">
-  <title>Archive · 9KYO DEV LOG</title>
+  <meta name="description" content="9kyo 개발 블로그의 글 목록, 태그, 시리즈 아카이브입니다.">
+  <meta name="theme-color" content="#faf9f5">
+  <title>Archive · 9kyo.log</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-  <div class="site-shell">
-    <header class="masthead"><div class="signal-cluster" aria-hidden="true"><span class="signal-dot is-live"></span><span class="signal-dot"></span><span class="signal-dot"></span></div><p class="boot-message">› ARCHIVE CHANNEL · INDEX READY</p><p class="clock" data-clock>--:--:-- KST</p></header>
-    <nav class="primary-nav" aria-label="주요 메뉴">
-      <a class="brand" href="index.html"><span class="brand-mark">9K</span><span class="brand-copy">DEV LOG</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
-      <div class="nav-links" id="nav-links"><a href="index.html">HOME</a><a class="is-active" href="archive.html" aria-current="page">ARCHIVE</a><a href="about.html">ABOUT</a><a href="https://9ky0.tistory.com/" target="_blank" rel="noreferrer">TISTORY ↗</a></div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="주요 메뉴">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✶</span><span>9kyo.log</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">메뉴</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a class="is-active" href="archive.html" aria-current="page">Archive</a>
+        <a href="about.html">About</a>
+        <a href="https://9ky0.tistory.com/" target="_blank" rel="noreferrer">Tistory ↗</a>
+      </div>
     </nav>
-    <div class="utility-strip"><span>CHANNEL: ARCHIVE</span><span>INDEX: PUBLIC</span><span class="utility-push">ENTRIES: <b data-result-count>1</b></span></div>
+  </header>
 
-    <main id="main">
-      <section class="page-banner plate cut-corners">
-        <p class="eyebrow">SEARCHABLE DEVELOPMENT RECORDS</p>
-        <h1>ARCHIVE<span>_</span></h1>
-        <p>기술 노트, 시행착오, 개발 기록을 한곳에서 찾습니다.</p>
-      </section>
+  <main id="main">
+    <section class="page-hero container">
+      <p class="eyebrow">Searchable archive</p>
+      <h1>필요할 때 다시 찾는 기술 기록.</h1>
+      <p>제목, 요약, 태그를 기준으로 글을 찾고 CS·AI·게임 개발·그래픽스 주제별로 탐색합니다.</p>
+    </section>
 
-      <section class="archive-layout">
-        <div class="panel plate">
-          <header class="panel-heading"><span class="heading-icon">⌕</span><h2>SEARCH DATABASE</h2></header>
-          <form class="archive-search" data-search-form>
-            <label for="archive-query">제목, 설명 또는 태그 검색</label>
-            <div class="search-input-row"><input id="archive-query" name="q" type="search" placeholder="TYPE A KEYWORD..." autocomplete="off" data-search-input><button type="submit">SCAN</button></div>
-            <div class="filter-chips" aria-label="태그 필터"><button type="button" class="is-selected" data-filter="all">ALL</button><button type="button" data-filter="frontend">FRONTEND</button><button type="button" data-filter="backend">BACKEND</button><button type="button" data-filter="devlog">DEV LOG</button><button type="button" data-filter="notes">NOTES</button></div>
-          </form>
-        </div>
-
-        <div class="panel plate archive-results">
-          <header class="panel-heading"><span class="heading-icon">▦</span><h2>TRANSMISSION INDEX</h2><span class="result-label"><b data-result-count>1</b> RESULT</span></header>
-          <div class="post-list" data-search-results>
-            <article class="post-row" data-post data-title="블로그 시스템을 시작합니다" data-description="Tistory에서 GitHub Pages로 이동하기 위한 새 개발 기록 공간" data-tags="notice log github-pages devlog">
-              <div class="post-meta"><time datetime="2026-06-24">2026.06.24</time><span>NOTICE</span></div>
-              <div class="post-copy"><h3><a href="post-welcome.html">블로그 시스템을 시작합니다</a></h3><p>Tistory에서 GitHub Pages로 이동하기 위한 새 개발 기록 공간을 열었습니다.</p><div class="tag-line"><span>#devlog</span><span>#github-pages</span></div></div>
-              <a class="arrow-chip" href="post-welcome.html" aria-label="블로그 시스템을 시작합니다 읽기">›</a>
-            </article>
+    <section class="container archive-shell">
+      <aside class="archive-filter" aria-label="아카이브 필터">
+        <form class="archive-search" data-search-form>
+          <label for="archive-query">검색</label>
+          <div class="search-line">
+            <input id="archive-query" name="q" type="search" placeholder="keyword, tag, topic" autocomplete="off" data-search-input>
+            <button type="submit">찾기</button>
           </div>
-          <p class="empty-state" data-empty-state hidden>검색 조건과 일치하는 기록이 없습니다. 다른 신호를 입력해 주세요.</p>
+        </form>
+
+        <div class="filter-group" aria-label="태그 필터">
+          <p>Tags</p>
+          <button type="button" class="is-selected" data-filter="all">All</button>
+          <button type="button" data-filter="cs">CS</button>
+          <button type="button" data-filter="ai">AI</button>
+          <button type="button" data-filter="game-dev">Game Dev</button>
+          <button type="button" data-filter="graphics">Graphics</button>
+          <button type="button" data-filter="devlog">Devlog</button>
+          <button type="button" data-filter="github-pages">GitHub Pages</button>
         </div>
-      </section>
-    </main>
-    <footer class="site-footer cut-corners"><p>© 2026 9KYO · POWERED BY GITHUB PAGES</p><nav><a href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="https://github.com/9kyo-hwang">GITHUB</a></nav></footer>
-  </div>
+
+        <div class="series-card">
+          <p class="eyebrow">Series</p>
+          <a href="archive.html?tag=graphics">Graphics API 읽기</a>
+          <a href="archive.html?tag=ai">AI paper notes</a>
+          <a href="archive.html?tag=game-dev">Game engine notes</a>
+        </div>
+      </aside>
+
+      <div class="archive-results">
+        <div class="result-header">
+          <h2>All posts</h2>
+          <p><b data-result-count>1</b> entries</p>
+        </div>
+
+        <div class="archive-list" data-search-results>
+          <article class="archive-item" data-post data-title="블로그 시스템을 시작합니다" data-description="Tistory에서 GitHub Pages로 이동하기 위한 새 개발 기록 공간" data-tags="notice log github-pages devlog">
+            <time datetime="2026-06-24">2026.06.24</time>
+            <div>
+              <p class="post-meta">Notice · 1 min</p>
+              <h3><a href="post-welcome.html">블로그 시스템을 시작합니다</a></h3>
+              <p>Tistory에서 GitHub Pages로 이동하기 위한 새 개발 기록 공간을 열었습니다.</p>
+              <div class="tag-list">
+                <a href="archive.html?tag=devlog">#devlog</a>
+                <a href="archive.html?tag=github-pages">#github-pages</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state" data-empty-state hidden>검색 조건과 일치하는 기록이 없습니다. 다른 키워드나 태그를 입력해 주세요.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">✶</span><span>9kyo.log</span></a>
+        <p>읽고, 만들고, 다시 설명하기 위한 개발 기록.</p>
+      </div>
+      <nav aria-label="하단 메뉴"><a href="index.html">Home</a><a href="about.html">About</a><a href="https://github.com/9kyo-hwang">GitHub</a></nav>
+    </div>
+  </footer>
 </body>
 </html>
-

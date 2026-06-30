@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="9kyo의 개발 기록과 기술 노트를 모은 블로그입니다.">
-  <meta name="theme-color" content="#21242e">
-  <title>9KYO DEV LOG</title>
+  <meta name="description" content="CS, AI, 게임 개발, 그래픽스 프로그래밍을 차분히 기록하는 9kyo의 개발 블로그입니다.">
+  <meta name="theme-color" content="#faf9f5">
+  <title>9kyo.log · 개발 블로그</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/main.js" defer></script>
@@ -13,148 +13,160 @@
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
 
-  <div class="site-shell">
-    <header class="masthead">
-      <div class="signal-cluster" aria-hidden="true">
-        <span class="signal-dot is-live"></span>
-        <span class="signal-dot"></span>
-        <span class="signal-dot"></span>
-      </div>
-      <p class="boot-message"><span aria-hidden="true">›</span> SYSTEM ONLINE · WELCOME, DEVELOPER</p>
-      <p class="clock" data-clock aria-label="현재 시간">--:--:-- KST</p>
-    </header>
-
-    <nav class="primary-nav" aria-label="주요 메뉴">
-      <a class="brand" href="index.html" aria-label="9KYO DEV LOG 홈">
-        <span class="brand-mark">9K</span>
-        <span class="brand-copy">DEV LOG</span>
+  <header class="site-header">
+    <nav class="nav container" aria-label="주요 메뉴">
+      <a class="brand" href="index.html" aria-label="9kyo.log 홈">
+        <span class="brand-mark" aria-hidden="true">✶</span>
+        <span>9kyo.log</span>
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">MENU</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">메뉴</button>
       <div class="nav-links" id="nav-links">
-        <a class="is-active" href="index.html" aria-current="page">HOME</a>
-        <a href="archive.html">ARCHIVE</a>
-        <a href="about.html">ABOUT</a>
-        <a href="https://9ky0.tistory.com/" target="_blank" rel="noreferrer">TISTORY ↗</a>
+        <a class="is-active" href="index.html" aria-current="page">Home</a>
+        <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
+        <a href="https://9ky0.tistory.com/" target="_blank" rel="noreferrer">Tistory ↗</a>
       </div>
     </nav>
+  </header>
 
-    <div class="utility-strip" aria-label="블로그 상태">
-      <span>OWNER: 9KYO</span>
-      <span>MODE: BUILD &amp; LEARN</span>
-      <span class="utility-push">STATUS: <b>READY</b></span>
-    </div>
-
-    <main id="main">
-      <section class="hero plate cut-corners" aria-labelledby="hero-title">
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-copy">
-          <p class="eyebrow">PERSONAL DEVELOPMENT ARCHIVE / EST. 2026</p>
-          <h1 id="hero-title">BUILD.<br>BREAK.<br><span>RECORD.</span></h1>
-          <p class="hero-description">개발하면서 마주친 문제와 해결 과정, 다시 꺼내 볼 기술 노트를 차곡차곡 기록합니다.</p>
-          <a class="action-button" href="archive.html"><span>기록 탐색하기</span><b aria-hidden="true">›</b></a>
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Computer Science · AI · Game Development</p>
+        <h1>기술을 오래 읽히는 글로 남깁니다.</h1>
+        <p class="hero-description">
+          CS 기초, AI 실험, 게임 엔진과 그래픽스 API를 공부하며 만난 개념과 시행착오를
+          다시 찾기 좋은 문서로 정리하는 개인 개발 아카이브입니다.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="archive.html">아카이브 보기</a>
+          <a class="button secondary" href="about.html">블로그 소개</a>
         </div>
-        <div class="hero-console" aria-label="블로그 콘솔 상태">
-          <div class="console-screen">
-            <span class="screen-label">CURRENT CHANNEL</span>
-            <strong>DEVELOPMENT</strong>
-            <small>NOTES / TROUBLESHOOTING / LOGS</small>
-          </div>
-          <div class="console-controls" aria-hidden="true">
-            <span class="d-pad">+</span>
-            <span class="control-label">SELECT</span>
-            <span class="control-key">A</span>
-          </div>
+      </div>
+
+      <aside class="hero-card dark-card" aria-label="블로그 방향">
+        <p class="card-kicker">Current index</p>
+        <h2>읽기 좋은 기술 노트</h2>
+        <ul class="check-list">
+          <li>긴 글에 맞춘 넓은 본문 폭</li>
+          <li>태그·시리즈·검색 중심 아카이브</li>
+          <li>코드와 수식, 디버깅 로그가 편한 레이아웃</li>
+        </ul>
+        <pre><code>topics = [
+  "cs",
+  "ai",
+  "game-engine",
+  "graphics-api"
+]</code></pre>
+      </aside>
+    </section>
+
+    <section class="container section-grid" aria-labelledby="latest-title">
+      <div class="content-stack">
+        <div class="section-heading">
+          <p class="eyebrow">Recently written</p>
+          <h2 id="latest-title">최근 기록</h2>
         </div>
-      </section>
 
-      <div class="content-grid">
-        <section class="main-column" aria-labelledby="latest-title">
-          <div class="panel plate">
-            <header class="panel-heading">
-              <span class="heading-icon" aria-hidden="true">▦</span>
-              <h2 id="latest-title">LATEST TRANSMISSIONS</h2>
-              <a href="archive.html">VIEW ALL <span aria-hidden="true">›</span></a>
-            </header>
-
-            <div class="post-list">
-              <article class="post-row" data-post data-title="블로그 시스템을 시작합니다" data-tags="notice log">
-                <div class="post-meta">
-                  <time datetime="2026-06-24">2026.06.24</time>
-                  <span>NOTICE</span>
-                </div>
-                <div class="post-copy">
-                  <h3><a href="post-welcome.html">블로그 시스템을 시작합니다</a></h3>
-                  <p>Tistory에서 GitHub Pages로 이동하기 위한 새 개발 기록 공간을 열었습니다.</p>
-                  <div class="tag-line"><span>#log</span><span>#github-pages</span></div>
-                </div>
-                <a class="arrow-chip" href="post-welcome.html" aria-label="블로그 시스템을 시작합니다 읽기">›</a>
-              </article>
-
-              <article class="post-row is-placeholder" data-post data-title="다음 개발 기록이 이곳에 표시됩니다" data-tags="coming soon">
-                <div class="post-meta">
-                  <span>UP NEXT</span>
-                  <span>QUEUE 01</span>
-                </div>
-                <div class="post-copy">
-                  <h3>다음 개발 기록이 이곳에 표시됩니다</h3>
-                  <p>게시물을 추가하면 최신 글부터 이 패널에 쌓입니다.</p>
-                  <div class="tag-line"><span>#coming-soon</span></div>
-                </div>
-                <span class="arrow-chip is-muted" aria-hidden="true">·</span>
-              </article>
+        <article class="featured-post">
+          <div>
+            <p class="post-meta"><time datetime="2026-06-24">2026.06.24</time> · Notice · 1 min</p>
+            <h3><a href="post-welcome.html">블로그 시스템을 시작합니다</a></h3>
+            <p>
+              Tistory에서 이어지는 글과 새 개발 노트를 GitHub Pages 위에 차분히 쌓기 위한
+              첫 번째 기록입니다.
+            </p>
+            <div class="tag-list">
+              <a href="archive.html?tag=devlog">#devlog</a>
+              <a href="archive.html?tag=github-pages">#github-pages</a>
             </div>
           </div>
+          <a class="text-link" href="post-welcome.html">읽기 →</a>
+        </article>
 
-          <div class="panel plate topics-panel">
-            <header class="panel-heading">
-              <span class="heading-icon" aria-hidden="true">⌘</span>
-              <h2>ACTIVE TOPICS</h2>
-            </header>
-            <div class="topic-grid">
-              <a href="archive.html?tag=frontend" class="topic-card"><b>01</b><span>FRONTEND</span><small>UI · Web</small></a>
-              <a href="archive.html?tag=backend" class="topic-card"><b>02</b><span>BACKEND</span><small>API · Server</small></a>
-              <a href="archive.html?tag=devlog" class="topic-card"><b>03</b><span>DEV LOG</span><small>Build · Debug</small></a>
-              <a href="archive.html?tag=notes" class="topic-card"><b>04</b><span>NOTES</span><small>Learn · Recall</small></a>
+        <div class="post-card-grid">
+          <article class="post-card is-upcoming">
+            <p class="post-meta">Draft queue · AI</p>
+            <h3>Transformer를 구현 관점에서 다시 읽기</h3>
+            <p>논문 요약보다 코드와 텐서 shape 중심으로 self-attention을 정리할 예정입니다.</p>
+            <div class="tag-list"><span>#ai</span><span>#paper-note</span></div>
+          </article>
+          <article class="post-card is-upcoming">
+            <p class="post-meta">Draft queue · Graphics</p>
+            <h3>DirectX 11 렌더링 파이프라인 메모</h3>
+            <p>입력 조립부터 출력 병합까지, 그래픽스 API의 상태와 데이터 흐름을 정리합니다.</p>
+            <div class="tag-list"><span>#graphics</span><span>#directx11</span></div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <section class="side-card search-card">
+          <h2>빠른 검색</h2>
+          <form action="archive.html" method="get" class="search-box">
+            <label for="quick-search">키워드</label>
+            <div>
+              <input id="quick-search" name="q" type="search" placeholder="예: graphics, ai, unity">
+              <button type="submit">검색</button>
             </div>
-          </div>
+          </form>
         </section>
 
-        <aside class="side-column" aria-label="블로그 정보">
-          <section class="status-panel command-slab cut-corners">
-            <p class="eyebrow">OPERATOR PROFILE</p>
-            <div class="avatar" aria-hidden="true">9K</div>
-            <h2>9KYO</h2>
-            <p>문제를 풀고, 배운 것을 기록하는 개발자.</p>
-            <dl class="status-list">
-              <div><dt>GITHUB</dt><dd>CONNECTED</dd></div>
-              <div><dt>POSTS</dt><dd>001</dd></div>
-              <div><dt>SYSTEM</dt><dd class="status-ok">ONLINE</dd></div>
-            </dl>
-            <a class="dark-button" href="https://github.com/9kyo-hwang" target="_blank" rel="noreferrer">GITHUB PROFILE <span>↗</span></a>
-          </section>
+        <section class="side-card">
+          <h2>주제 지도</h2>
+          <div class="topic-list">
+            <a href="archive.html?tag=cs"><span>CS</span><small>자료구조 · OS · 네트워크</small></a>
+            <a href="archive.html?tag=ai"><span>AI</span><small>논문 · 모델 · 실험</small></a>
+            <a href="archive.html?tag=game-dev"><span>Game Dev</span><small>엔진 · 툴 · 게임플레이</small></a>
+            <a href="archive.html?tag=graphics"><span>Graphics</span><small>DirectX · 렌더링 · 셰이더</small></a>
+          </div>
+        </section>
+      </aside>
+    </section>
 
-          <section class="mini-panel plate">
-            <header class="mini-heading">QUICK SEARCH</header>
-            <form class="search-box" action="archive.html" method="get">
-              <label for="quick-search">기록 검색</label>
-              <div><input id="quick-search" name="q" type="search" placeholder="keyword" autocomplete="off"><button type="submit">GO</button></div>
-            </form>
-          </section>
-
-          <section class="mini-panel plate migration-panel">
-            <header class="mini-heading">LEGACY ARCHIVE</header>
-            <p>이전 기록은 Tistory에서 확인할 수 있습니다.</p>
-            <a href="https://9ky0.tistory.com/" target="_blank" rel="noreferrer">VISIT TISTORY <span aria-hidden="true">›</span></a>
-          </section>
-        </aside>
+    <section class="container learning-map" aria-labelledby="map-title">
+      <div class="section-heading">
+        <p class="eyebrow">Archive design</p>
+        <h2 id="map-title">글을 쌓는 방식</h2>
       </div>
-    </main>
+      <div class="map-grid">
+        <article>
+          <span>01</span>
+          <h3>개념 노트</h3>
+          <p>CS/AI/그래픽스 개념을 나중에 다시 읽어도 흐름이 보이도록 정리합니다.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>구현 기록</h3>
+          <p>작은 실험, 코드 조각, 엔진/프레임워크 사용 중 알게 된 점을 남깁니다.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>트러블슈팅</h3>
+          <p>에러 메시지, 원인 추적, 해결 과정과 재발 방지 메모를 함께 보관합니다.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>시리즈</h3>
+          <p>긴 학습 주제는 여러 글로 쪼개고, 아카이브에서 한 번에 따라갈 수 있게 묶습니다.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <footer class="site-footer cut-corners">
-      <p>© 2026 9KYO · POWERED BY GITHUB PAGES</p>
-      <nav aria-label="하단 메뉴"><a href="archive.html">ARCHIVE</a><a href="about.html">ABOUT</a><a href="https://github.com/9kyo-hwang">GITHUB</a></nav>
-    </footer>
-  </div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">✶</span><span>9kyo.log</span></a>
+        <p>CS, AI, 게임 개발을 위한 개인 기술 아카이브.</p>
+      </div>
+      <nav aria-label="하단 메뉴">
+        <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/9kyo-hwang">GitHub</a>
+        <a href="https://9ky0.tistory.com/">Tistory</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
-
