@@ -25,6 +25,17 @@
 3. `index.html`의 최근 글 영역과 `archive.html`의 검색 목록에 항목을 추가합니다.
 4. `sitemap.xml`에 새 주소를 추가합니다.
 
+## 자주 수정하는 위치
+
+- 홈 상단 문구: `index.html`의 `<section class="hero container">`
+- 홈 최근 기록: `index.html`의 `<article class="featured-post">`
+- 홈 우측 주제 지도: `index.html`의 `<div class="topic-list">`
+- 전체 글 목록/검색 대상: `archive.html`의 `<div class="archive-list" data-search-results>`
+- 글 본문 템플릿: `post-welcome.html`
+- 색상, 여백, 글자 크기: `assets/styles.css`의 `:root`와 `.hero`, `.section-grid`
+
+현재 사이트는 별도 CMS 없이 정적 HTML로 동작합니다. 웹 화면에서 바로 글을 수정하려면 CMS나 빌드 도구를 붙여야 하므로, 지금은 HTML 파일을 직접 고치는 방식을 기준으로 관리합니다.
+
 ## 배포
 
 저장소 이름은 `9kyo-hwang.github.io`이며, 파일은 `main` 브랜치 루트에서 GitHub Pages로 배포됩니다.
